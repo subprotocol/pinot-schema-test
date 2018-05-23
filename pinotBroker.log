@@ -1,0 +1,305 @@
+2018/05/23 11:13:01.533 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:13:01.535 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:13:01.822 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:13:01.823 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:13:01.831 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:13:01.831 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:13:01.831 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:13:01.831 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:13:01.944 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:13:01.945 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:13:01.945 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:13:02.521 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfd49920007, adding to session id map.
+2018/05/23 11:13:03.079 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfd49920007, adding to session id map.
+2018/05/23 11:13:03.313 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfd49920007, adding to session id map.
+2018/05/23 11:13:05.712 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : c6a97b40-8df3-440f-b279-215f757ec155, {CREATE_TIMESTAMP=1527095585687, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527095585709, EXE_SESSION_ID=1638dfd49920006, FROM_STATE=OFFLINE, MSG_ID=c6a97b40-8df3-440f-b279-215f757ec155, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527095585700, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9001, SRC_SESSION_ID=1638dfd49920003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638dfd49920006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:13:05.725 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:13:05.725 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:13:05.725 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:13:05.726 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@3de35ef4
+2018/05/23 11:13:05.726 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:13:05.726 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:13:05.727 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:13:05.728 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:13:05.746 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:13:05.751 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:13:05.814 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@3de35ef4
+2018/05/23 11:13:05.837 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:13:05.837 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 23 ms
+2018/05/23 11:13:05.837 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 25 ms (stat 0 ms, EV check 0 ms, IC fetch 1 ms, rebuild 25 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:13:30.141 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:13:46.061 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:13:46.063 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:13:46.355 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:13:46.356 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:13:46.362 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:13:46.362 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:13:46.362 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:13:46.363 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:13:46.476 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:13:46.476 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:13:46.476 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:13:47.039 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfdf9280007, adding to session id map.
+2018/05/23 11:13:47.526 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfdf9280007, adding to session id map.
+2018/05/23 11:13:47.777 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfdf9280007, adding to session id map.
+2018/05/23 11:13:49.794 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : 472221ec-8fbf-4a6b-8999-3319b2efcdb4, {CREATE_TIMESTAMP=1527095629777, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527095629791, EXE_SESSION_ID=1638dfdf9280006, FROM_STATE=OFFLINE, MSG_ID=472221ec-8fbf-4a6b-8999-3319b2efcdb4, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527095629782, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9001, SRC_SESSION_ID=1638dfdf9280003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638dfdf9280006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:13:49.805 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:13:49.806 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:13:49.806 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:13:49.806 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@4186f743
+2018/05/23 11:13:49.806 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:13:49.807 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:13:49.807 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:13:49.808 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:13:49.826 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@4186f743
+2018/05/23 11:13:49.828 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:13:49.828 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:13:49.828 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 4 ms (stat 0 ms, EV check 0 ms, IC fetch 1 ms, rebuild 4 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:13:49.837 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:13:50.321 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@4186f743
+2018/05/23 11:13:50.339 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:13:50.339 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 18 ms
+2018/05/23 11:13:50.339 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 20 ms (stat 0 ms, EV check 0 ms, IC fetch 1 ms, rebuild 20 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:13:53.706 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:14:30.928 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:14:30.930 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:14:31.223 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:14:31.224 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:14:31.231 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:14:31.231 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:14:31.231 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:14:31.231 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:14:31.337 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:14:31.337 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:14:31.337 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:14:31.848 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:32.341 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:32.595 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:32.879 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:33.154 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:33.344 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:33.589 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:33.835 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:34.120 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dfea74c0007, adding to session id map.
+2018/05/23 11:14:36.293 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : 1098ea41-e44a-4ae9-be4f-3c21d314ef41, {CREATE_TIMESTAMP=1527095676259, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527095676283, EXE_SESSION_ID=1638dfea74c0006, FROM_STATE=OFFLINE, MSG_ID=1098ea41-e44a-4ae9-be4f-3c21d314ef41, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527095676268, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9001, SRC_SESSION_ID=1638dfea74c0003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638dfea74c0006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:14:36.318 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:14:36.319 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:14:36.319 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:14:36.319 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:14:36.320 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:14:36.351 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@6867845c
+2018/05/23 11:14:36.357 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:14:36.361 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:14:36.361 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 25 ms (stat 1 ms, EV check 1 ms, IC fetch 12 ms, rebuild 23 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:14:36.361 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 0 ms (stat 0 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:14:36.392 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 0 ms (stat 0 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:14:36.446 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@6867845c
+2018/05/23 11:14:36.464 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:14:36.464 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 17 ms
+2018/05/23 11:14:36.464 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 20 ms (stat 1 ms, EV check 0 ms, IC fetch 1 ms, rebuild 19 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:14:40.752 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:14:53.960 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:14:53.962 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:14:54.338 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:14:54.339 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:14:54.357 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:14:54.357 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:14:54.358 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:14:54.358 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:14:54.517 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:14:54.517 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:14:54.517 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:14:55.095 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dff00310007, adding to session id map.
+2018/05/23 11:14:55.722 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dff00310007, adding to session id map.
+2018/05/23 11:14:56.080 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638dff00310007, adding to session id map.
+2018/05/23 11:14:58.594 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : 58690c7a-29b4-4f0a-a43e-a15a60586c0b, {CREATE_TIMESTAMP=1527095698570, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527095698585, EXE_SESSION_ID=1638dff00310006, FROM_STATE=OFFLINE, MSG_ID=58690c7a-29b4-4f0a-a43e-a15a60586c0b, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527095698576, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9001, SRC_SESSION_ID=1638dff00310003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638dff00310006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:14:58.610 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:14:58.610 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:14:58.610 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:14:58.611 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:14:58.612 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:14:58.619 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@4c3244da
+2018/05/23 11:14:58.622 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:14:58.624 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 1 ms
+2018/05/23 11:14:58.624 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 8 ms (stat 1 ms, EV check 0 ms, IC fetch 1 ms, rebuild 7 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:14:58.625 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:14:58.642 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:14:58.749 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@4c3244da
+2018/05/23 11:14:58.779 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:14:58.831 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 82 ms
+2018/05/23 11:14:58.839 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 93 ms (stat 1 ms, EV check 0 ms, IC fetch 1 ms, rebuild 92 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:17:03.547 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:18:07.273 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:18:07.275 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:18:07.575 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:18:07.575 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:18:07.583 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:18:07.583 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:18:07.583 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:18:07.583 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:18:07.692 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:18:07.692 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:18:07.693 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:18:08.273 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e01f70e0007, adding to session id map.
+2018/05/23 11:18:08.811 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e01f70e0007, adding to session id map.
+2018/05/23 11:18:09.126 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e01f70e0007, adding to session id map.
+2018/05/23 11:18:27.576 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:18:37.374 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:18:37.376 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:18:37.659 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:18:37.659 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:18:37.667 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:18:37.667 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:18:37.667 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:18:37.667 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:18:37.781 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:18:37.781 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:18:37.781 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:18:38.333 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e026c2a0007, adding to session id map.
+2018/05/23 11:18:38.836 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e026c2a0007, adding to session id map.
+2018/05/23 11:18:39.104 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e026c2a0007, adding to session id map.
+2018/05/23 11:18:53.313 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:19:00.993 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:19:00.995 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:19:01.285 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:19:01.285 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:19:01.293 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:19:01.293 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:19:01.293 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:19:01.293 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:19:01.392 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:19:01.392 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:19:01.392 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:19:01.945 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e02c83d0007, adding to session id map.
+2018/05/23 11:19:02.471 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e02c83d0007, adding to session id map.
+2018/05/23 11:19:02.740 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e02c83d0007, adding to session id map.
+2018/05/23 11:19:04.381 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : a7746aa1-f021-4135-92ae-a238f19dee7d, {CREATE_TIMESTAMP=1527095944364, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527095944378, EXE_SESSION_ID=1638e02c83d0006, FROM_STATE=OFFLINE, MSG_ID=a7746aa1-f021-4135-92ae-a238f19dee7d, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527095944369, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9001, SRC_SESSION_ID=1638e02c83d0003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638e02c83d0006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:19:04.391 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:19:04.391 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:19:04.391 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:19:04.391 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@56ab3c56
+2018/05/23 11:19:04.392 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:19:04.392 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 1 ms
+2018/05/23 11:19:04.393 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:19:04.394 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:19:04.410 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:19:04.419 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:19:04.514 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@56ab3c56
+2018/05/23 11:19:04.542 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:19:04.542 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 27 ms
+2018/05/23 11:19:04.542 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 30 ms (stat 1 ms, EV check 0 ms, IC fetch 1 ms, rebuild 29 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:19:16.418 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:19:25.961 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:19:25.963 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:19:26.263 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:19:26.264 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:19:26.271 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:19:26.271 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:19:26.271 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:19:26.272 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:19:26.375 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:19:26.375 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:19:26.375 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:19:26.931 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e0327660007, adding to session id map.
+2018/05/23 11:19:27.437 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e0327660007, adding to session id map.
+2018/05/23 11:19:27.694 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e0327660007, adding to session id map.
+2018/05/23 11:19:31.704 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:20:04.336 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:20:04.338 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:20:04.604 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:20:04.605 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:20:04.612 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:20:04.612 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:20:04.612 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:20:04.612 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:20:04.715 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:20:04.715 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:20:04.715 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:20:05.230 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e03be990007, adding to session id map.
+2018/05/23 11:20:05.699 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e03be990007, adding to session id map.
+2018/05/23 11:20:05.933 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e03be990007, adding to session id map.
+2018/05/23 11:20:07.467 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : 0f200b56-b364-4388-8ad8-8708feacfc3d, {CREATE_TIMESTAMP=1527096007450, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527096007464, EXE_SESSION_ID=1638e03be990006, FROM_STATE=OFFLINE, MSG_ID=0f200b56-b364-4388-8ad8-8708feacfc3d, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527096007455, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9000, SRC_SESSION_ID=1638e03be990003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638e03be990006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:20:07.476 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:20:07.476 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:20:07.476 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:20:07.476 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@7deadb7d
+2018/05/23 11:20:07.476 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:20:07.477 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:20:07.477 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:20:07.478 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:20:07.499 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@7deadb7d
+2018/05/23 11:20:07.501 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:20:07.501 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:20:07.501 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 4 ms (stat 1 ms, EV check 0 ms, IC fetch 1 ms, rebuild 3 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:20:07.588 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@7deadb7d
+2018/05/23 11:20:07.608 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:20:07.609 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 21 ms
+2018/05/23 11:20:07.609 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 23 ms (stat 0 ms, EV check 0 ms, IC fetch 1 ms, rebuild 23 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:20:38.887 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:21:44.537 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:21:44.539 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:21:44.837 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:21:44.837 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:21:44.845 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:21:44.845 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:21:44.845 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:21:44.846 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:21:44.960 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:21:44.960 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:21:44.960 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:21:45.521 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e0542cd0007, adding to session id map.
+2018/05/23 11:21:46.021 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e0542cd0007, adding to session id map.
+2018/05/23 11:21:46.300 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e0542cd0007, adding to session id map.
+2018/05/23 11:21:48.388 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : 33ff90b5-ec37-44bd-a51a-a53b05b43d8c, {CREATE_TIMESTAMP=1527096108350, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527096108374, EXE_SESSION_ID=1638e0542cd0006, FROM_STATE=OFFLINE, MSG_ID=33ff90b5-ec37-44bd-a51a-a53b05b43d8c, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527096108359, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9000, SRC_SESSION_ID=1638e0542cd0003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638e0542cd0006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:21:48.408 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:21:48.408 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:21:48.408 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:21:48.409 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:21:48.409 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:21:48.422 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@45ea63a5
+2018/05/23 11:21:48.424 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:21:48.426 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:21:48.426 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 9 ms (stat 2 ms, EV check 0 ms, IC fetch 2 ms, rebuild 7 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:21:48.428 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:21:48.434 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:21:48.443 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 0 ms (stat 0 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:21:48.527 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@45ea63a5
+2018/05/23 11:21:48.544 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:21:48.544 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 17 ms
+2018/05/23 11:21:48.544 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 19 ms (stat 0 ms, EV check 0 ms, IC fetch 1 ms, rebuild 19 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:24:14.001 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!
+2018/05/23 11:24:23.953 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Starting Pinot broker
+2018/05/23 11:24:23.955 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Connecting Helix components
+2018/05/23 11:24:24.275 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Instantiating Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:24:24.276 INFO [com.linkedin.pinot.broker.broker.AccessControlFactory] [] Initializing Access control factory class com.linkedin.pinot.broker.broker.AllowAllAccessControlFactory
+2018/05/23 11:24:24.284 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker response limit is: 2147483647
+2018/05/23 11:24:24.284 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker timeout is - 10000 ms
+2018/05/23 11:24:24.284 INFO [com.linkedin.pinot.broker.requesthandler.BrokerRequestHandler] [] Broker id: Broker_127.0.0.1_8000
+2018/05/23 11:24:24.284 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network initialized !!
+2018/05/23 11:24:24.418 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network starting !!
+2018/05/23 11:24:24.418 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Network running !!
+2018/05/23 11:24:24.418 INFO [com.linkedin.pinot.broker.broker.helix.HelixBrokerStarter] [] Pinot broker ready and listening on port 8000 for API requests
+2018/05/23 11:24:25.029 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e07b5f90007, adding to session id map.
+2018/05/23 11:24:25.659 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e07b5f90007, adding to session id map.
+2018/05/23 11:24:25.922 INFO [com.linkedin.pinot.broker.broker.helix.LiveInstancesChangeListenerImpl] [] Found new instance Server_127.0.0.1_7000 with session id 1638e07b5f90007, adding to session id map.
+2018/05/23 11:24:27.969 INFO [com.linkedin.pinot.broker.broker.helix.BrokerResourceOnlineOfflineStateModelFactory] [] BrokerResourceOnlineOfflineStateModel.onBecomeOnlineFromOffline() : 0ae1d224-1045-43c0-b412-41c217fce009, {CREATE_TIMESTAMP=1527096267944, ClusterEventName=IdealStateChange, EXECUTE_START_TIMESTAMP=1527096267960, EXE_SESSION_ID=1638e07b5f90006, FROM_STATE=OFFLINE, MSG_ID=0ae1d224-1045-43c0-b412-41c217fce009, MSG_STATE=read, MSG_TYPE=STATE_TRANSITION, PARTITION_NAME=events_REALTIME, READ_TIMESTAMP=1527096267951, RESOURCE_NAME=brokerResource, SRC_NAME=127.0.0.1_9000, SRC_SESSION_ID=1638e07b5f90003, STATE_MODEL_DEF=BrokerResourceOnlineOfflineStateModel, STATE_MODEL_FACTORY_NAME=DEFAULT, TGT_NAME=Broker_127.0.0.1_8000, TGT_SESSION_ID=1638e07b5f90006, TO_STATE=ONLINE}{}{}
+2018/05/23 11:24:27.980 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:24:27.981 INFO [com.linkedin.pinot.broker.routing.builder.KafkaLowLevelConsumerRoutingTableBuilder] [] Using default value for realtime target server count of 8
+2018/05/23 11:24:27.981 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Initialized routingTableBuilder: com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder for table events_REALTIME
+2018/05/23 11:24:27.981 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] Initializing rate limiter for table events
+2018/05/23 11:24:27.982 INFO [com.linkedin.pinot.broker.queryquota.TableQueryQuotaManager] [] No qps config specified for table: events_REALTIME
+2018/05/23 11:24:27.993 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@1ad2d3c1
+2018/05/23 11:24:27.995 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:24:27.996 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:24:27.996 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 5 ms (stat 0 ms, EV check 0 ms, IC fetch 2 ms, rebuild 5 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:24:28.000 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@1ad2d3c1
+2018/05/23 11:24:28.000 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:24:28.000 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 0 ms
+2018/05/23 11:24:28.000 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 2 ms (stat 0 ms, EV check 0 ms, IC fetch 1 ms, rebuild 2 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:24:28.001 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 1 ms (stat 1 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:24:28.006 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 5 ms (stat 3 ms, EV check 0 ms, IC fetch 0 ms, rebuild 0 ms), routing tables rebuilt for tables [], 0 / 1 routing tables rebuilt
+2018/05/23 11:24:28.112 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Trying to compute routing table for table events_REALTIME using com.linkedin.pinot.broker.routing.builder.DefaultRealtimeRoutingTableBuilder@1ad2d3c1
+2018/05/23 11:24:28.140 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] No need to update time boundary for table events_REALTIME
+2018/05/23 11:24:28.141 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Routing table update for table events_REALTIME completed in 28 ms
+2018/05/23 11:24:28.141 INFO [com.linkedin.pinot.broker.routing.HelixExternalViewBasedRouting] [] Processed external view change in 31 ms (stat 1 ms, EV check 0 ms, IC fetch 1 ms, rebuild 30 ms), routing tables rebuilt for tables [events_REALTIME], 1 / 1 routing tables rebuilt
+2018/05/23 11:24:36.775 INFO [com.linkedin.pinot.broker.broker.BrokerServerBuilder] [] Shutting down Network !!

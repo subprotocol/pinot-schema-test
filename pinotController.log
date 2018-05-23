@@ -1,0 +1,865 @@
+2018/05/23 11:12:58.298 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:12:58.364 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:12:58.698 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:12:58.734 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:12:58.974 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:12:59.044 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:12:59.080 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:12:59.107 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:12:59.189 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:12:59.189 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:12:59.513 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:12:59.515 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:12:59.525 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:12:59.526 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:12:59.530 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:12:59.531 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:12:59.645 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:12:59.646 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:12:59.646 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:12:59.658 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:12:59.658 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:12:59.664 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:12:59.665 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:12:59.665 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:12:59.676 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:12:59.677 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:12:59.680 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:12:59.681 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:12:59.682 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:12:59.685 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:12:59.690 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:12:59.691 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:12:59.691 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:13:01.405 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:13:01.405 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:13:01.405 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:13:01.405 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:13:02.420 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:13:03.616 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:13:04.658 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:13:04.663 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=bQh2GskD_Up2CR73zPPs1v4G9y09l_0ELx4fE status code 200 OK
+2018/05/23 11:13:04.697 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events_schema",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:13:04.699 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=2z8BuqMxRsqOCwgNu_Y2hJSIJwdbMseSTW5 status code 200 OK
+2018/05/23 11:13:04.789 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:04.789 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:04.789 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:04.794 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:13:04.794 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:13:04.794 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:13:04.797 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:13:05.156 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:13:05.206 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:13:05.243 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:13:05.244 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:13:05.244 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:13:05.263 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:13:05.686 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] LLC is already set up for table events_REALTIME, not configuring again
+2018/05/23 11:13:05.687 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:13:05.687 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:13:05.695 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:13:05.716 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] LLC is already set up for table events_REALTIME, not configuring again
+2018/05/23 11:13:05.718 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:13:05.719 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:13:05.734 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:13:42.413 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:13:42.488 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:13:42.872 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:13:42.917 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:13:43.306 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:13:43.351 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:13:43.389 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:13:43.420 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:13:43.502 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:13:43.502 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:13:43.817 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:13:43.820 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:13:43.830 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:13:43.830 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:13:43.832 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:13:43.832 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:13:43.951 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:13:43.953 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:13:43.953 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:13:43.969 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:13:43.969 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:13:43.974 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:13:43.975 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:43.975 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:43.987 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:13:43.987 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:13:43.991 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:13:43.992 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:13:43.994 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:13:43.996 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:13:44.002 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:13:44.005 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:13:44.005 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:13:45.899 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:13:45.899 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:13:45.899 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:13:45.899 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:13:46.951 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:13:48.085 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:13:49.126 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:13:49.127 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=a4DcnASVsWYq9N1Y-kkl0J3UvpEYgE status code 200 OK
+2018/05/23 11:13:49.164 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events_schema",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:13:49.166 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=p3dUlMq1xhNzAol62aFVwosjcz1hc6 status code 200 OK
+2018/05/23 11:13:49.295 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:49.295 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:49.295 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:13:49.299 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:13:49.299 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:13:49.299 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:13:49.302 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:13:49.647 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:13:49.693 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:13:49.734 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:13:49.734 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:13:49.735 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:13:49.753 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:13:49.774 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] LLC is already set up for table events_REALTIME, not configuring again
+2018/05/23 11:13:49.774 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:13:49.775 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:13:49.794 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:13:49.812 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] LLC is already set up for table events_REALTIME, not configuring again
+2018/05/23 11:13:49.812 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:13:49.812 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:13:49.831 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:14:27.781 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:14:27.857 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:14:28.210 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:14:28.241 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:14:28.440 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:14:28.512 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:14:28.573 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:14:28.590 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:14:28.675 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:14:28.676 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:14:28.937 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:14:28.940 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:14:28.951 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:14:28.952 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:14:28.957 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:14:28.957 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:14:29.078 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:14:29.079 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:14:29.079 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:14:29.085 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:14:29.085 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:14:29.087 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:14:29.088 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:29.088 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:29.092 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:14:29.093 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:14:29.094 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:14:29.094 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:14:29.095 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:14:29.096 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:14:29.098 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:14:29.098 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:14:29.098 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:14:30.805 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:14:30.805 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:14:30.805 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:14:30.805 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:14:31.749 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:14:34.426 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:14:35.837 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:14:35.843 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=wiuiolablUfGRZtf6aNHHYqKGjfXE225WEg status code 200 OK
+2018/05/23 11:14:35.871 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events_schema",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:14:35.873 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=PrwnzoAIVwdtIO652DHd3pS-O0u43r status code 200 OK
+2018/05/23 11:14:35.936 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:35.936 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:35.936 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:35.940 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:14:35.940 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:14:35.940 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:14:35.942 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:14:36.164 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:14:36.204 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:14:36.228 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:14:36.229 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:14:36.229 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:14:36.243 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:14:36.269 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] LLC is already set up for table events_REALTIME, not configuring again
+2018/05/23 11:14:36.271 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:14:36.271 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:14:36.308 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:14:36.359 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] LLC is already set up for table events_REALTIME, not configuring again
+2018/05/23 11:14:36.360 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:14:36.360 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:14:36.379 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:14:49.769 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:14:49.862 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:14:50.334 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:14:50.386 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:14:50.740 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:14:50.826 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:14:50.866 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:14:50.895 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:14:51.020 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:14:51.020 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:14:51.434 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:14:51.438 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:14:51.451 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:14:51.452 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:14:51.462 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:14:51.463 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:14:51.607 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:14:51.609 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:14:51.610 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:14:51.622 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:14:51.623 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:14:51.630 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:14:51.631 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:51.631 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:51.643 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:14:51.643 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:14:51.646 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:14:51.646 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:14:51.648 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:14:51.652 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:14:51.657 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:14:51.658 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:14:51.658 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:14:53.824 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:14:53.824 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:14:53.824 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:14:53.825 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:14:54.961 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:14:56.416 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:14:57.896 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:14:57.902 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=8BgdOMukmpKvmXSE--lQ8VDEqklP7FO37UiZUq status code 200 OK
+2018/05/23 11:14:57.955 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events_schema",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:14:57.957 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=S9ETSHm7ATS_EOE52MgcYGFUyZn9Ddfs status code 200 OK
+2018/05/23 11:14:58.074 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:58.074 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:58.074 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:14:58.082 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:14:58.082 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:14:58.082 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:14:58.084 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:14:58.471 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:14:58.512 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:14:58.544 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:14:58.544 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:14:58.544 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:14:58.559 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:15:15.663 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9001/, content-type null status code 200 OK
+2018/05/23 11:15:19.189 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9001/swagger.json, content-type null status code 200 OK
+2018/05/23 11:15:27.114 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9001/tables, content-type null status code 200 OK
+2018/05/23 11:15:51.458 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Start managing retention for all tables
+2018/05/23 11:15:51.460 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Start managing retention for table: events_REALTIME
+2018/05/23 11:15:51.463 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Removing aged (more than 7 days) deleted segments for all tables
+2018/05/23 11:15:51.471 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Finished managing retention for all tables in 12ms
+2018/05/23 11:15:54.943 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9001/schemas, content-type null status code 200 OK
+2018/05/23 11:16:51.611 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation
+2018/05/23 11:16:51.614 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting to validate table: events_REALTIME
+2018/05/23 11:16:51.634 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Validation completed
+2018/05/23 11:16:51.648 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting relocation of realtime segments
+2018/05/23 11:16:51.648 INFO [com.linkedin.pinot.controller.helix.SegmentStatusChecker] [] Starting Segment Status check for metrics
+2018/05/23 11:16:51.649 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting relocation of segments for table: events_REALTIME
+2018/05/23 11:16:51.649 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Skipping relocation of segments for events_REALTIME
+2018/05/23 11:16:51.651 INFO [com.linkedin.pinot.controller.helix.SegmentStatusChecker] [] Segment status metrics completed in 2ms
+2018/05/23 11:16:56.786 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:16:56.853 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:16:57.335 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:16:57.405 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] cluster already exists ********************************************* 
+2018/05/23 11:16:57.406 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:16:57.627 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:16:57.631 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:16:57.634 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:16:57.634 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:16:57.636 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:16:57.636 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:16:57.662 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:16:57.663 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:16:57.663 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:16:57.669 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:16:57.669 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:16:57.961 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Not the leader of this cluster, ignoring realtime segment property store change.
+2018/05/23 11:16:57.961 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:16:57.961 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:16:57.965 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Not the leader of this cluster, ignoring realtime segment property store change.
+2018/05/23 11:16:57.974 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Lost leadership
+2018/05/23 11:16:57.974 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:16:57.983 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:16:57.983 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:16:57.984 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:16:57.985 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:16:57.986 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:16:57.987 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:16:57.987 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:18:03.927 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:18:03.988 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:18:04.475 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:18:04.516 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:18:04.772 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:18:04.840 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:18:04.878 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:18:04.912 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:18:05.045 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:18:05.046 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:18:05.341 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:18:05.343 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:18:05.347 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:18:05.348 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:18:05.349 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:18:05.349 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:18:05.483 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:18:05.484 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:18:05.484 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:18:05.498 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:18:05.499 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:18:05.504 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:18:05.504 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:18:05.504 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:18:05.514 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:18:05.515 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:18:05.519 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:18:05.520 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:18:05.520 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:18:05.523 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:18:05.529 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:18:05.530 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:18:05.531 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:18:07.152 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:18:07.152 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:18:07.152 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:18:07.153 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:18:08.182 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:18:09.646 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:18:10.747 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:18:10.748 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=1olsl8unosKC2JzSMH6pleT6qhM9quoj5RrJgX status code 200 OK
+2018/05/23 11:18:33.990 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:18:34.072 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:18:34.485 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:18:34.528 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:18:34.761 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:18:34.833 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:18:34.869 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:18:34.900 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:18:35.023 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:18:35.023 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:18:35.297 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:18:35.299 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:18:35.307 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:18:35.307 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:18:35.309 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:18:35.309 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:18:35.442 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:18:35.443 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:18:35.443 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:18:35.453 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:18:35.453 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:18:35.458 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:18:35.459 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:18:35.459 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:18:35.469 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:18:35.469 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:18:35.473 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:18:35.473 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:18:35.474 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:18:35.478 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:18:35.483 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:18:35.484 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:18:35.484 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:18:37.240 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:18:37.241 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:18:37.241 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:18:37.241 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:18:38.218 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:18:39.429 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:18:40.552 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:18:40.553 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=yaMjQvcQMuzfwwSvhl__Y2Tj2nKuF97lFo42 status code 200 OK
+2018/05/23 11:18:40.632 INFO [com.linkedin.pinot.controller.api.resources.PinotTableRestletResource] [] Invalid table config for table: events2_REALTIME exception: No schema defined for realtime table: events2_REALTIME
+2018/05/23 11:18:40.650 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 400 Bad Request
+2018/05/23 11:18:57.516 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:18:57.609 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:18:58.006 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:18:58.054 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:18:58.294 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:18:58.359 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:18:58.402 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:18:58.435 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:18:58.537 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:18:58.538 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:18:58.833 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:18:58.835 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:18:58.846 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:18:58.846 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:18:58.848 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:18:58.848 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:18:58.985 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:18:58.987 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:18:58.988 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:18:58.999 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:18:59.000 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:18:59.006 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:18:59.006 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:18:59.007 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:18:59.016 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:18:59.016 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:18:59.020 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:18:59.020 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:18:59.022 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:18:59.025 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:18:59.029 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:18:59.030 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:18:59.030 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:19:00.865 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:19:00.865 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:19:00.865 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:19:00.865 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:19:01.828 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:19:02.950 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:19:03.975 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:19:03.978 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/schemas, content-type multipart/form-data; boundary=_hLu4V6JcbkFcl6-SFtsltF1I8-4xb status code 200 OK
+2018/05/23 11:19:04.068 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:19:04.068 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:19:04.068 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:19:04.072 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:19:04.072 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:19:04.072 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:19:04.075 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:19:04.262 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:19:04.299 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:19:04.332 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:19:04.332 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:19:04.332 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:19:04.346 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:19:04.359 INFO [com.linkedin.pinot.controller.api.resources.PinotTableRestletResource] [] Invalid table config for table: events2_REALTIME exception: No schema defined for realtime table: events2_REALTIME
+2018/05/23 11:19:04.389 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9001/tables, content-type application/x-www-form-urlencoded status code 400 Bad Request
+2018/05/23 11:19:22.735 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:19:22.811 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:19:23.125 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:19:23.163 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:19:23.381 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:19:23.451 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:19:23.497 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:19:23.528 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:19:23.659 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:19:23.659 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:19:23.990 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:19:23.991 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:19:23.996 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:19:23.996 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:19:23.998 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:19:23.998 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:19:24.130 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:19:24.132 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:19:24.133 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:19:24.146 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:19:24.146 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:19:24.149 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:19:24.150 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:19:24.150 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:19:24.158 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:19:24.158 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:19:24.161 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:19:24.162 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:19:24.163 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:19:24.164 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:19:24.168 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:19:24.170 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9001
+2018/05/23 11:19:24.170 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:19:25.822 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9001
+2018/05/23 11:19:25.823 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9001
+2018/05/23 11:19:25.823 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9001 for API requests
+2018/05/23 11:19:25.823 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9001/
+2018/05/23 11:19:26.840 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:19:27.971 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9001/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:20:00.567 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:20:00.669 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:20:01.054 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:20:01.099 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:20:01.320 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:20:01.391 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:20:01.434 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:20:01.468 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:20:01.578 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:20:01.578 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:20:01.885 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:20:01.888 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:20:01.898 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:20:01.898 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:20:01.900 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:20:01.900 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:20:02.044 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:20:02.046 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:20:02.046 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:20:02.058 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:20:02.058 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:20:02.066 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:20:02.066 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:20:02.067 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:20:02.081 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:20:02.082 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:20:02.087 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:20:02.087 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:20:02.089 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:20:02.091 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:20:02.096 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:20:02.098 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9000
+2018/05/23 11:20:02.098 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:20:04.203 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9000
+2018/05/23 11:20:04.204 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9000
+2018/05/23 11:20:04.204 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9000 for API requests
+2018/05/23 11:20:04.204 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9000/
+2018/05/23 11:20:05.126 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:20:06.148 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:20:07.058 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:20:07.059 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/schemas, content-type multipart/form-data; boundary=A8X-93wDttaiDUwSKnuw5Xq62udQM9ukWu8x7 status code 200 OK
+2018/05/23 11:20:07.139 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:20:07.139 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:20:07.139 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:20:07.143 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:20:07.143 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:20:07.143 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:20:07.146 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:20:07.340 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:20:07.392 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:20:07.418 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:20:07.418 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:20:07.419 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:20:07.433 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9000/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:20:07.447 INFO [com.linkedin.pinot.controller.api.resources.PinotTableRestletResource] [] Invalid table config for table: events2_REALTIME exception: No schema defined for realtime table: events2_REALTIME
+2018/05/23 11:20:07.502 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9000/tables, content-type application/x-www-form-urlencoded status code 400 Bad Request
+2018/05/23 11:20:14.449 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9000/, content-type null status code 200 OK
+2018/05/23 11:20:16.528 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9000/swagger.json, content-type null status code 200 OK
+2018/05/23 11:20:21.799 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 0:0:0:0:0:0:0:1 GET http://localhost:9000/tables, content-type null status code 200 OK
+2018/05/23 11:21:40.923 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:21:41.006 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:21:41.384 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:21:41.423 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:21:41.607 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:21:41.676 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:21:41.754 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:21:41.775 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:21:41.884 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:21:41.885 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:21:42.286 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:21:42.288 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:21:42.299 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:21:42.300 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:21:42.302 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:21:42.302 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:21:42.468 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:21:42.469 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:21:42.470 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:21:42.485 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:21:42.485 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:21:42.492 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:21:42.493 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:21:42.493 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:21:42.506 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:21:42.506 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:21:42.510 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:21:42.510 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:21:42.512 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:21:42.514 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:21:42.516 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:21:42.518 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9000
+2018/05/23 11:21:42.518 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:21:44.417 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9000
+2018/05/23 11:21:44.417 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9000
+2018/05/23 11:21:44.417 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9000 for API requests
+2018/05/23 11:21:44.417 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9000/
+2018/05/23 11:21:45.435 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:21:46.580 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:21:47.930 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:21:47.934 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/schemas, content-type multipart/form-data; boundary=sxsZQwTYjpaHL4_sG_ccugT3TT1qlnztg_1D status code 200 OK
+2018/05/23 11:21:48.071 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:21:48.071 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:21:48.071 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:21:48.074 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:21:48.074 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:21:48.074 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:21:48.077 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:21:48.264 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:21:48.302 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:21:48.325 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:21:48.325 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:21:48.325 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:21:48.339 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9000/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:21:53.356 INFO [com.linkedin.pinot.controller.api.resources.PinotTableRestletResource] [] Invalid table config for table: events2_REALTIME exception: No schema defined for realtime table: events2_REALTIME
+2018/05/23 11:21:53.374 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9000/tables, content-type application/x-www-form-urlencoded status code 400 Bad Request
+2018/05/23 11:22:42.305 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Start managing retention for all tables
+2018/05/23 11:22:42.333 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Start managing retention for table: events_REALTIME
+2018/05/23 11:22:42.336 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Removing aged (more than 7 days) deleted segments for all tables
+2018/05/23 11:22:42.339 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Finished managing retention for all tables in 7ms
+2018/05/23 11:23:42.472 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation
+2018/05/23 11:23:42.493 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting to validate table: events_REALTIME
+2018/05/23 11:23:42.511 INFO [com.linkedin.pinot.controller.helix.SegmentStatusChecker] [] Starting Segment Status check for metrics
+2018/05/23 11:23:42.513 INFO [com.linkedin.pinot.controller.helix.SegmentStatusChecker] [] Segment status metrics completed in 2ms
+2018/05/23 11:23:42.514 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting relocation of realtime segments
+2018/05/23 11:23:42.514 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting relocation of segments for table: events_REALTIME
+2018/05/23 11:23:42.515 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Skipping relocation of segments for events_REALTIME
+2018/05/23 11:23:42.516 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Validation completed
+2018/05/23 11:24:20.483 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot controller
+2018/05/23 11:24:20.556 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Initializing SegmentFetcherFactory
+2018/05/23 11:24:20.929 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting Pinot Helix resource manager and connecting to Zookeeper
+2018/05/23 11:24:20.970 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Creating a new cluster, as the helix cluster : test-cluster was not found ********************************************* 
+2018/05/23 11:24:21.230 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Enable auto join.
+2018/05/23 11:24:21.297 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model SegmentOnlineOfflineStateModel (with CONSUMED state) generated using class com.linkedin.pinot.controller.helix.core.PinotHelixSegmentOnlineOfflineStateModelGenerator **********************************************
+2018/05/23 11:24:21.353 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding state model definition named : BrokerResourceOnlineOfflineStateModel generated using : class com.linkedin.pinot.controller.helix.core.PinotHelixBrokerResourceOnlineOfflineStateModelGenerator ********************************************** 
+2018/05/23 11:24:21.380 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Adding empty ideal state for Broker!
+2018/05/23 11:24:21.483 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] New Cluster setup completed... ********************************************** 
+2018/05/23 11:24:21.483 INFO [com.linkedin.pinot.controller.helix.core.util.HelixSetupUtils] [] Starting Helix Standalone Controller ... 
+2018/05/23 11:24:21.779 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task resource manager
+2018/05/23 11:24:21.781 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting task manager
+2018/05/23 11:24:21.796 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting retention manager
+2018/05/23 11:24:21.797 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] Starting RetentionManager with runFrequencyInSeconds: 21600, deletedSegmentsRetentionInDays: 7
+2018/05/23 11:24:21.801 INFO [com.linkedin.pinot.controller.helix.core.retention.RetentionManager] [] RetentionManager started
+2018/05/23 11:24:21.801 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting validation manager
+2018/05/23 11:24:21.959 INFO [com.linkedin.pinot.controller.validation.ValidationManager] [] Starting validation manager
+2018/05/23 11:24:21.961 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment manager
+2018/05/23 11:24:21.962 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Starting realtime segments manager, adding a listener on the property store table configs path.
+2018/05/23 11:24:21.972 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:24:21.973 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: CONTROLLER LEADER CHANGE
+2018/05/23 11:24:21.979 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:24:21.980 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:24:21.980 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:24:21.989 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Became leader
+2018/05/23 11:24:21.990 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting segment status manager
+2018/05/23 11:24:21.993 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Starting realtime segment relocation manager
+2018/05/23 11:24:21.993 INFO [com.linkedin.pinot.controller.helix.core.relocation.RealtimeSegmentRelocator] [] Starting realtime segment relocator
+2018/05/23 11:24:21.995 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Creating rebalance segments factory
+2018/05/23 11:24:21.997 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Use class: com.linkedin.pinot.controller.api.access.AllowAllAccessFactory as the AccessControlFactory
+2018/05/23 11:24:22.003 INFO [com.linkedin.pinot.controller.api.events.MetadataEventNotifierFactory] [] Instantiating metadata event notifier factory class com.linkedin.pinot.controller.api.events.DefaultMetadataEventNotifierFactory
+2018/05/23 11:24:22.006 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller download url base: http://127.0.0.1:9000
+2018/05/23 11:24:22.006 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Injecting configuration and resource managers to the API context
+2018/05/23 11:24:23.811 INFO [com.linkedin.pinot.controller.api.ControllerAdminApiApplication] [] Start jersey admin API on port: 9000
+2018/05/23 11:24:23.811 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Started Jersey API on port 9000
+2018/05/23 11:24:23.811 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Pinot controller ready and listening on port 9000 for API requests
+2018/05/23 11:24:23.811 INFO [com.linkedin.pinot.controller.ControllerStarter] [] Controller services available at http://127.0.0.1:9000/
+2018/05/23 11:24:24.921 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:24:26.218 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/tenants/, content-type application/json status code 200 OK
+2018/05/23 11:24:27.404 INFO [com.linkedin.pinot.controller.api.resources.PinotSchemaRestletResource] [] Metadata change notification for schema {
+  "schemaName": "events",
+  "dimensionFieldSpecs": [
+    {
+      "name": "data",
+      "dataType": "STRING"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "name": "time",
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS"
+    }
+  }
+}, type CREATE
+2018/05/23 11:24:27.406 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://localhost:9000/schemas, content-type multipart/form-data; boundary=ZrCgmLBTO3V7x7ftbRvIVDymZEY4HdgCQF status code 200 OK
+2018/05/23 11:24:27.507 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:24:27.507 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:24:27.507 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE
+2018/05/23 11:24:27.511 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] PinotRealtimeSegmentManager.handleChildChange with table: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:24:27.511 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Processing change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:24:27.511 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Received change notification for path: /test-cluster/PROPERTYSTORE/CONFIGS/TABLE/events_REALTIME
+2018/05/23 11:24:27.514 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotRealtimeSegmentManager] [] Computed list of new segments to add : []
+2018/05/23 11:24:27.834 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Creating CONSUMING segment for events_REALTIME partition 0 with seq 0
+2018/05/23 11:24:27.889 INFO [com.linkedin.pinot.controller.helix.core.realtime.PinotLLCRealtimeSegmentManager] [] Found kafka offset 0 for table events_REALTIME for partition 0
+2018/05/23 11:24:27.920 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added Helix entries for low-level consumers for events_REALTIME 
+2018/05/23 11:24:27.920 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Successfully added or updated the table events_REALTIME 
+2018/05/23 11:24:27.920 INFO [com.linkedin.pinot.controller.helix.core.PinotHelixResourceManager] [] Updating BrokerResource IdealState for table: events_REALTIME
+2018/05/23 11:24:27.934 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9000/tables, content-type application/x-www-form-urlencoded status code 200 OK
+2018/05/23 11:24:32.953 INFO [com.linkedin.pinot.controller.api.resources.PinotTableRestletResource] [] Invalid table config for table: events2_REALTIME exception: No schema defined for realtime table: events2_REALTIME
+2018/05/23 11:24:32.970 INFO [com.linkedin.pinot.controller.api.resources.ControllerResponseFilter] [] Handled request from 127.0.0.1 POST http://127.0.0.1:9000/tables, content-type application/x-www-form-urlencoded status code 400 Bad Request

@@ -1,0 +1,18 @@
+{
+  "schemaName": "events"
+, "metricFieldSpecs": [
+],
+  "dimensionFieldSpecs": [
+    {
+      "dataType": "STRING",
+      "name": "data"
+    }
+  ],
+  "timeFieldSpec": {
+    "incomingGranularitySpec": {
+      "dataType": "LONG",
+      "timeType": "MILLISECONDS",
+      "name": "time"
+    }
+  }
+}
